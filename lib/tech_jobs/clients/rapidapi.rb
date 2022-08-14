@@ -9,14 +9,15 @@ class Rapidapi
   attr_reader :uri, :key, :query, :location
 
   def initialize(uri:, query:, location: nil, max_pages: MAX_PAGES)
-    @uri = uri
     @key = ENV.fetch("RAPID_API_KEY")
+    @uri = uri
     @query = query
     @location = location
     @max_pages = max_pages
+
     @cache = Lightly.new
     @cache.dir = "/tmp/cache"
-    @cache.life = "5d"
+    @cache.life = '5d'
 
     @conn = Faraday.new(
       headers: headers

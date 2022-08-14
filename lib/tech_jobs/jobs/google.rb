@@ -4,8 +4,9 @@ require "zip-codes"
 
 class Google < Rapidapi
   URL = "google-jobs-search.p.rapidapi.com"
+  
   def initialize(location, query)
-    super(uri: "google-jobs-search.p.rapidapi.com", query: "#{query} in #{location}")
+    super(uri: URL, query: "#{query} in #{location}")
   end
 
   def config
