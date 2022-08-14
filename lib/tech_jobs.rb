@@ -9,8 +9,8 @@ require_relative "tech_jobs/jobs/google"
 require_relative "tech_jobs/models/job"
 require_relative "tech_jobs/models/person"
 
-require 'faraday'
-require 'faraday/net_http'
+require "faraday"
+require "faraday/net_http"
 Faraday.default_adapter = :net_http
 
 module TechJobs

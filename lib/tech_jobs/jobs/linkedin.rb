@@ -10,14 +10,14 @@ class Linkedin < Rapidapi
       keys:
         {
           root: nil,
-          job_url: 'linkedin_job_url_cleaned',
-          job_title: 'job_title',
-          company_name: 'company_name',
-          company_url: 'company_url',
-          posted_date: 'posted_date',
-          query: 'search_terms',
+          job_url: "linkedin_job_url_cleaned",
+          job_title: "job_title",
+          company_name: "company_name",
+          company_url: "company_url",
+          posted_date: "posted_date",
+          query: "search_terms"
         },
-      action: :post,
+      action: :post
     }
   end
 end

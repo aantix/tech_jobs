@@ -1,5 +1,6 @@
 # frozen_string_literal: true
-require 'zip-codes'
+
+require "zip-codes"
 
 class Indeed < Rapidapi
   def initialize(location, query)
@@ -12,14 +13,14 @@ class Indeed < Rapidapi
       keys:
         {
           root: nil,
-          job_url: 'url',
-          job_title: 'job_title',
-          company_name: 'company_name',
+          job_url: "url",
+          job_title: "job_title",
+          company_name: "company_name",
           company_url: nil,
-          posted_date: 'posted_date',
-          query: 'search_terms',
+          posted_date: "posted_date",
+          query: "search_terms"
         },
-      action: :post,
+      action: :post
     }
   end
 end

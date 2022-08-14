@@ -11,7 +11,7 @@ class Job
 
   def company_domain
     return if company_url.nil?
-    
+
     URI.parse(company_url).host.sub(/\Awww\./, "")
   end
 end

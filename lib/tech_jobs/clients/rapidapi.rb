@@ -1,7 +1,7 @@
 # frozen_string_literal: true
-#
-require 'pry'
-require 'lightly'
+
+require "pry"
+require "lightly"
 
 class Rapidapi
   MAX_PAGES = 1
@@ -15,8 +15,8 @@ class Rapidapi
     @location = location
     @max_pages = max_pages
     @cache = Lightly.new
-    @cache.dir = '/tmp/cache'
-    @cache.life = '5d'
+    @cache.dir = "/tmp/cache"
+    @cache.life = "5d"
 
     @conn = Faraday.new(
       headers: headers
@@ -46,7 +46,7 @@ class Rapidapi
         results << job
       end
     end
-    
+
     results
   end
 

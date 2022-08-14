@@ -14,7 +14,7 @@ if technology.nil? || titles.empty?
   exit(1)
 else
   puts "Technology: #{technology}"
-  puts "Prospect titles: #{titles.join(',')}"
+  puts "Prospect titles: #{titles.join(",")}"
   puts
 end
 
